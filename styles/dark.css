@@ -99,6 +99,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  
   :root {
         /* Дублируем переменные тёмной темы */    
         --text-font: IBM Plex Mono;
