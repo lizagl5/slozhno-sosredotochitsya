@@ -94,14 +94,14 @@
 }
 
 @media (prefers-color-scheme: light) {
-  
+
   :root {
-        /* Дублируем переменные светлой темы */    
-        --text-font: IBM Plex Mono;
-        --bg-color: #FFF1F7;
-        --text-color: #353430;
-        --accent-color: #FF8DCB;
-    }
+    /* Дублируем переменные светлой темы */    
+    --text-font: IBM Plex Mono;
+    --bg-color: #FFF1F7;
+    --text-color: #353430;
+    --accent-color: #FF8DCB;
+  }
   
   .page {
     /* сохраните этот селектор в приведённом виде.

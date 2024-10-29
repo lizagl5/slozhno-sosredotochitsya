@@ -99,14 +99,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  
+
   :root {
-        /* Дублируем переменные тёмной темы */    
-        --text-font: IBM Plex Mono;
-        --bg-color: #000028;
-        --text-color: #F1B2CE;
-        --accent-color: #FF0070;
-    }
+    /* Дублируем переменные тёмной темы */    
+    --text-font: IBM Plex Mono;
+    --bg-color: #000028;
+    --text-color: #F1B2CE;
+    --accent-color: #FF0070;
+  }
   
   .page {
     background-image: url(../images/cover-image-dark.png);
