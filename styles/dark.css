@@ -4,51 +4,36 @@
   переключая тему
 */
 
-:root.theme_dark {
-  --text-font: IBM Plex Mono;
-  --bg-color: #000028;
-  --text-color: #F1B2CE;
-  --accent-color: #FF0070;
-}
-
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --text-font: IBM Plex Mono;
+  --text-font: "IBM Plex Mono";
   --bg-color: #000028;
+  --heading-color: #DB00FF;
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
-  background-image: url(../images/cover-image-dark.png);
+  --color-opaque: rgba(255, 0, 112, 0.4);
+  --bg-image: url(../images/cover-image-dark.png);
 }
 
-.theme_dark .header {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto 1fr;
-  justify-items: end;
-  align-items: center;
-}
-
-.theme_dark header::before {
+.theme_dark .decorated-zone::before {
   border: 1px var(--accent-color);
   border-style: solid solid none none;
 }
 
-.theme_dark header::after {
+.theme_dark .decorated-zone::after {
   border: 1px var(--accent-color);
   border-style: none none solid solid;
 }
 
 .theme_dark .rec-icon {
-  color: var(--accent-color);
+  display: block;
 }
 
 .theme_dark .rec-icon::after {
-  content: '';
-  background-color: var(--accent-color);
+  display: block;
 }
 
 .theme_dark .header__theme-menu-item {
@@ -56,24 +41,11 @@
 }
 
 .theme_dark .header__theme-menu-button:focus-visible {
-  outline: none;
-  margin-bottom: -1px;
   border-bottom: 1px solid var(--accent-color);
 }
 
 .theme_dark .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
-  pointer-events: none;
-}
-
-.theme_dark .header__theme-menu-button:hover {
-  outline: 1px solid;
-  outline-color: rgba(255,0,112, 0.4);
-  cursor: pointer;
-}
-
-.theme_dark .heading {
-  color: #DB00FF;
 }
 
 .theme_dark .title-decor {
@@ -84,60 +56,35 @@
   color: var(--accent-color);
 }
 
-.theme_dark .heading-final {
-  color: #DB00FF;
-}
-
-.theme_dark .footer-decor-top {
-  border: 1px var(--accent-color);
-  border-style: solid solid none none;
-}
-
-.theme_dark .footer-decor-bottom {
-  border: 1px var(--accent-color);
-  border-style: none none solid solid;
-}
-
 @media (prefers-color-scheme: dark) {
 
   :root {
     /* Дублируем переменные тёмной темы */    
-    --text-font: IBM Plex Mono;
+    --text-font: "IBM Plex Mono";
     --bg-color: #000028;
+    --heading-color: #DB00FF;
     --text-color: #F1B2CE;
     --accent-color: #FF0070;
-  }
-  
-  .page {
-    background-image: url(../images/cover-image-dark.png);
+    --color-opaque: rgba(255, 0, 112, 0.4);
+    --bg-image: url(../images/cover-image-dark.png);
   }
 
-  .header {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
-    justify-items: end;
-    align-items: center;
-  }
-  
-  header::before {
+  .decorated-zone::before {
     border: 1px var(--accent-color);
     border-style: solid solid none none;
   }
   
-  header::after {
+  .decorated-zone::after {
     border: 1px var(--accent-color);
     border-style: none none solid solid;
   }
-  
+
   .rec-icon {
-    color: var(--accent-color);
+    display: block;
   }
   
   .rec-icon::after {
-    content: '';
-    background-color: var(--accent-color);
+    display: block;
   }
   
   .header__theme-menu-item {
@@ -145,24 +92,11 @@
   }
   
   .header__theme-menu-button:focus-visible {
-    outline: none;
-    margin-bottom: -1px;
     border-bottom: 1px solid var(--accent-color);
   }
   
   .header__theme-menu-button_active {
     outline: 1px solid var(--accent-color);
-    pointer-events: none;
-  }
-  
-  .header__theme-menu-button:hover {
-    outline: 1px solid;
-    outline-color: rgba(255,0,112, 0.4);
-    cursor: pointer;
-  }
-  
-  .heading {
-    color: #DB00FF;
   }
   
   .title-decor {
@@ -172,18 +106,4 @@
   .subheading {
     color: var(--accent-color);
   }
-  
-  .heading-final {
-    color: #DB00FF;
-  }
-  
-  .footer-decor-top {
-    border: 1px var(--accent-color);
-    border-style: solid solid none none;
-  }
-  
-  .footer-decor-bottom {
-    border: 1px var(--accent-color);
-    border-style: none none solid solid;
-  }
-  }
+}

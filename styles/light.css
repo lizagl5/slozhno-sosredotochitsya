@@ -4,51 +4,36 @@
   переключая тему
 */
 
-:root.theme_light {
-  --text-font: IBM Plex Mono;
-  --bg-color: #FFF1F7;
-  --text-color: #353430;
-  --accent-color: #FF8DCB;
-}
-
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --text-font: IBM Plex Mono;
+  --text-font: "IBM Plex Mono";
   --bg-color: #FFF1F7;
+  --heading-color: #FFC2E6;
   --text-color: #353430;
   --accent-color: #FF8DCB;
-  background-image: url(../images/cover-image-light.png);
+  --color-opaque: rgba(53, 52, 48, 0.4);
+  --bg-image: url(../images/cover-image-light.png);
 }
 
-.theme_light .header {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto 1fr;
-  justify-items: end;
-  align-items: center;
-}
-
-.theme_light header::before {
+.theme_light .decorated-zone::before {
   border: 1px var(--text-color);
   border-style: solid solid none none;
 }
 
-.theme_light header::after {
+.theme_light .decorated-zone::after {
   border: 1px var(--text-color);
   border-style: none none solid solid;
 }
 
 .theme_light .rec-icon {
-  color: var(--bg-color);
+  display: none;
 }
 
 .theme_light .rec-icon::after {
-  content: '';
-  background-color: var(--bg-color);
+  display: none;
 }
 
 .theme_light .header__theme-menu-item {
@@ -63,14 +48,6 @@
   outline: 1px solid var(--text-color);
 }
 
-.theme_light .header__theme-menu-button:hover {
-  outline-color: rgba(53, 52, 48, 0.4);
-}
-
-.theme_light .heading {
-  color: #FFC2E6;
-}
-
 .theme_light .title-decor {
   color: var(--text-color);
 }
@@ -79,28 +56,17 @@
   color: var(--text-color);
 }
 
-.theme_light .heading-final {
-  color: #FFC2E6;
-}
-
-.theme_light .footer-decor-top {
-  border: 1px var(--text-color);
-  border-style: solid solid none none;
-}
-
-.theme_light .footer-decor-bottom {
-  border: 1px var(--text-color);
-  border-style: none none solid solid;
-}
-
 @media (prefers-color-scheme: light) {
 
   :root {
     /* Дублируем переменные светлой темы */    
-    --text-font: IBM Plex Mono;
+    --text-font: "IBM Plex Mono";
     --bg-color: #FFF1F7;
+    --heading-color: #FFC2E6;
     --text-color: #353430;
     --accent-color: #FF8DCB;
+    --color-opaque: rgba(53, 52, 48, 0.4);
+    --bg-image: url(../images/cover-image-light.png);
   }
   
   .page {
@@ -108,39 +74,24 @@
       Так стили написанные ниже будут иметь больший вес,
       чем стили в медиазапросе предпочтений пользователя
     */
-    --text-font: IBM Plex Mono;
-    --bg-color: #FFF1F7;
-    --text-color: #353430;
-    --accent-color: #FF8DCB;
-    background-image: url(../images/cover-image-light.png);
   }
-  
-  .header {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
-    justify-items: end;
-    align-items: center;
-  }
-  
-  header::before {
+
+  .decorated-zone::before {
     border: 1px var(--text-color);
     border-style: solid solid none none;
   }
   
-  header::after {
+  .decorated-zone::after {
     border: 1px var(--text-color);
     border-style: none none solid solid;
   }
-  
+
   .rec-icon {
-    color: var(--bg-color);
+    display: none;
   }
   
   .rec-icon::after {
-    content: '';
-    background-color: var(--bg-color);
+    display: none;
   }
   
   .header__theme-menu-item {
@@ -155,34 +106,12 @@
     outline: 1px solid var(--text-color);
   }
   
-  .header__theme-menu-button:hover {
-    outline-color: rgba(53, 52, 48, 0.4);
-  }
-  
-  .heading {
-    color: #FFC2E6;
-  }
-  
   .title-decor {
     color: var(--text-color);
   }
   
   .subheading {
     color: var(--text-color);
-  }
-  
-  .heading-final {
-    color: #FFC2E6;
-  }
-  
-  .footer-decor-top {
-    border: 1px var(--text-color);
-    border-style: solid solid none none;
-  }
-  
-  .footer-decor-bottom {
-    border: 1px var(--text-color);
-    border-style: none none solid solid;
   }
 }
 

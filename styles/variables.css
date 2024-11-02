@@ -4,8 +4,11 @@
 */
 
 :root {
-  --text-font: IBM Plex Mono;
+  --text-font: "IBM Plex Mono";
   --bg-color: #000028;
+  --heading-color: #DB00FF;
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
+  --color-opaque: rgba(255, 0, 112, 0.4);
+  --bg-image: url(../images/cover-image-dark.png);
 }
