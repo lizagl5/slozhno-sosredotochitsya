@@ -11,4 +11,9 @@
   --accent-color: #FF0070;
   --color-opaque: rgba(255, 0, 112, 0.4);
   --bg-image: url(../images/cover-image-dark.png);
+  --decorated-zone-color: var(--accent-color);
+  --display-rec: block;
+  --menu-item-color: var(--accent-color);
+  --decorated-title-font-color: var(--bg-color);
+  --subheading-color: var(--accent-color);
 }

@@ -9,7 +9,7 @@
   color: var(--text-color, #F1B2CE);
   font-family: var(--text-font, monospace);
   background-color: var(--bg-color, #000028);
-  padding: 10px 10px 10px 10px;
+  padding: 0 10px 10px 10px;
   position: relative;
   background-image: var(--bg-image);
   background-size: cover;
@@ -22,7 +22,8 @@
   min-height: 668px;
   width: 100%;
   display: grid;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   grid-template-rows: 2fr fit-content(355px) 2fr;
 }
 
@@ -35,9 +36,9 @@
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 1px;
-  border: 1px var(--accent-color);
+  border: 1px var(--decorated-zone-color);
   border-style: solid solid none none;
 }
 
@@ -46,30 +47,32 @@
   width: 25px;
   height: 25px;
   position: absolute;
-  top: calc(100% - 2 * 10px - 25px);
+  bottom: 10px;
   left: -1px;
-  border: 1px var(--accent-color);
+  border: 1px var(--decorated-zone-color);
   border-style: none none solid solid;
 }
 
 .rec-icon {
+  display: var(--display-rec);
   font-family: var(--text-font), monospace;
   font-size: 18px;
   font-weight: normal;
   line-height: 25px;
   color: var(--accent-color);
   position: absolute;
-  top: 0px;
+  top: 8px;
   right: 30px;
 }
 
 .rec-icon::after {
   content: '';
+  display: var(--display-rec);
   position: absolute;
   background-color: var(--accent-color);
   width: 9px;
   height: 9px;
-  top: 8px;
+  top: 10px;
   left: 41px;
   border-radius: 100%;
   box-shadow: 0 0 4px 2px var(--accent-color);
@@ -92,7 +95,7 @@
   font-weight: normal;
   line-height: 18px;
   text-align: end;
-  color: var(--accent-color);
+  color: var(--menu-item-color);
 }
 
 .header__theme-menu-button {
@@ -105,11 +108,11 @@
 .header__theme-menu-button:focus-visible {
   outline: none;
   margin-bottom: -1px;
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--menu-item-color);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--menu-item-color);
   pointer-events: none;
 }
 
@@ -137,13 +140,13 @@
   line-height: 23.4px;
   text-align: left;
   align-self: center;
-  color: var(--bg-color);
+  color: var(--decorated-title-font-color);
   background-color: var(--accent-color);
   width: 100%;
 }
 
 .content {
-  padding-top: 30px;
+  padding-top: 40px;
   display: grid;
   gap: 50px;
 }
@@ -166,7 +169,7 @@
   font-weight: bold;
   line-height: 23.4px;
   text-align: left;
-  color: var(--accent-color);
+  color: var(--subheading-color);
   min-width: 100%;
 }
 
@@ -215,7 +218,7 @@
 }
 
 .gallery {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 img {
@@ -234,7 +237,8 @@ img {
   min-height: 668px;
   width: 100%;
   display: grid;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .heading-final {
@@ -250,11 +254,12 @@ img {
 
 @media (min-width: 768px) {
   .page {
-    padding: 20px 20px 20px 0;
+    padding: 0 20px 20px 0;
   }
   
   .header {
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .heading, .heading-final {
@@ -267,14 +272,23 @@ img {
     justify-self: end;
   }
 
+  .decorated-zone::before {
+    top: 20px;
+    right: 0;
+  }
+
   .decorated-zone::after {
-    top: calc(100% - 2 * 20px - 25px);
+    bottom: 20px;
     left: 20px;
+  }
+
+  .rec-icon {
+    top: 20px;
   }
 
   .content {
     padding-left: 20px;
-    padding-top: 40px;
+    padding-top: 60px;
     gap: 80px;
   }
 
@@ -287,7 +301,7 @@ img {
   }
 
   .gallery {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   .gallery-layout {
@@ -325,7 +339,8 @@ img {
   }
 
   .footer {
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 20px;
   }
 }

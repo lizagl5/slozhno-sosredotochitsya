@@ -16,44 +16,11 @@
   --accent-color: #FF0070;
   --color-opaque: rgba(255, 0, 112, 0.4);
   --bg-image: url(../images/cover-image-dark.png);
-}
-
-.theme_dark .decorated-zone::before {
-  border: 1px var(--accent-color);
-  border-style: solid solid none none;
-}
-
-.theme_dark .decorated-zone::after {
-  border: 1px var(--accent-color);
-  border-style: none none solid solid;
-}
-
-.theme_dark .rec-icon {
-  display: block;
-}
-
-.theme_dark .rec-icon::after {
-  display: block;
-}
-
-.theme_dark .header__theme-menu-item {
-  color: var(--accent-color);
-}
-
-.theme_dark .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
-}
-
-.theme_dark .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
-}
-
-.theme_dark .title-decor {
-  color: var(--bg-color);
-}
-
-.theme_dark .subheading {
-  color: var(--accent-color);
+  --decorated-zone-color: var(--accent-color);
+  --display-rec: block;
+  --menu-item-color: var(--accent-color);
+  --decorated-title-font-color: var(--bg-color);
+  --subheading-color: var(--accent-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,43 +34,10 @@
     --accent-color: #FF0070;
     --color-opaque: rgba(255, 0, 112, 0.4);
     --bg-image: url(../images/cover-image-dark.png);
-  }
-
-  .decorated-zone::before {
-    border: 1px var(--accent-color);
-    border-style: solid solid none none;
-  }
-  
-  .decorated-zone::after {
-    border: 1px var(--accent-color);
-    border-style: none none solid solid;
-  }
-
-  .rec-icon {
-    display: block;
-  }
-  
-  .rec-icon::after {
-    display: block;
-  }
-  
-  .header__theme-menu-item {
-    color: var(--accent-color);
-  }
-  
-  .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid var(--accent-color);
-  }
-  
-  .header__theme-menu-button_active {
-    outline: 1px solid var(--accent-color);
-  }
-  
-  .title-decor {
-    color: var(--bg-color);
-  }
-  
-  .subheading {
-    color: var(--accent-color);
+    --decorated-zone-color: var(--accent-color);
+    --display-rec: block;
+    --menu-item-color: var(--accent-color);
+    --decorated-title-font-color: var(--bg-color);
+    --subheading-color: var(--accent-color);
   }
 }
